@@ -25,6 +25,11 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
     Route::resource('/roles', 'RoleController', ['except' => 'destroy']);
 });
 
+Route::prefix('profile')->middleware('auth')->group(function () {
+    Route::get('/', 'ProfileController@index');
+    Route::get('/dashboard', 'ProfileController@dashboard')->name('profile.dashboard');
+});
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 // OAuth Routes

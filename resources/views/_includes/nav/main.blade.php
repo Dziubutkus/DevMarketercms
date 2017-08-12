@@ -1,7 +1,7 @@
 <nav class="nav has-shadow" >
     <div class="container">
         <div class="nav-left">
-        <a class="nav-item is-paddingless" href="{{route('home')}}">
+        <a class="nav-item is-paddingless" href="{{url('/')}}">
             <img src="{{asset('images/devmarketer-logo.png')}}" alt="DevMarketer logo">
         </a>
         <a class="nav-item is-tab is-hidden-mobile m-l-10">Learn</a>
@@ -24,7 +24,7 @@
             <button class="dropdown is-aligned-right nav-item is-tab" >
             Hey {{ Auth::user()->name }}
             <ul class="dropdown-menu" style="overflow: visible;">
-                <li><a href="#">
+                <li><a href="{{route('profile.dashboard')}}">
                     <span class="icon">
                         <i class="fa fa-fw fa-user-circle-o m-r-5"></i>
                     </span>Profile
