@@ -31,8 +31,21 @@
           </div>
 
           <b-checkbox name="remember" class="m-t-20">Remember Me</b-checkbox>
+          
 
-          <button class="button is-success is-outlined is-fullwidth m-t-30">Log In</button>
+          <div class="field">
+          <div class="columns">
+          <div class="column">
+          <button class="button is-success is-outlined is-fullwidth m-t-30 one-third">Log In</button>
+          </div>
+          <div class="column">
+          <a href="{{ url('/redirect/facebook') }}" class="button is-success is-outlined is-fullwidth m-t-30"><i class="fa fa-facebook"></i>&nbsp; Facebook</a>
+          </div>
+          <div class="column">
+          <a href="{{ url('/redirect/google') }}" class="button is-success is-outlined is-fullwidth m-t-30"><i class="fa fa-google"></i>&nbsp; Google</a>
+          </div>
+          </div>
+          </div>
         </form>
       </div> <!-- end of .card-content -->
     </div> <!-- end of .card -->

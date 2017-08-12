@@ -26,3 +26,9 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// OAuth Routes
+//Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+//Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('/redirect/{provider}', 'SocialAuthController@redirect');
+Route::get('/callback/{provider}', 'SocialAuthController@callback');
