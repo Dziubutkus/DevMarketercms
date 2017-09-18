@@ -2,7 +2,7 @@
     <div class="container">
         <div class="nav-left">
         <a class="nav-item is-paddingless" href="{{url('/')}}">
-            <img src="{{asset('images/devmarketer-logo.png')}}" alt="DevMarketer logo">
+            <img src="{{asset('images/WYD.png')}}" alt="What Today? logo">
         </a>
         <a class="nav-item is-tab is-hidden-mobile m-l-10">Learn</a>
         <a class="nav-item is-tab is-hidden-mobile">Discuss</a>
@@ -22,7 +22,7 @@
             <a href="{{route('register')}}" class="nav-item is-tab">Join the Community</a>
         @else
             <button class="dropdown is-aligned-right nav-item is-tab" >
-            Hey {{ Auth::user()->name }}
+            Hey, {{ Auth::user()->name }}
             <ul class="dropdown-menu" style="overflow: visible;">
                 <li><a href="{{route('profile.dashboard')}}">
                     <span class="icon">
@@ -40,6 +40,12 @@
                     <span class="icon">
                         <i class="fa fa-fw fa-cog m-r-5"></i>
                     </span>Manage
+                    </a>
+                </li>
+                <li><a href="{{route('posts.create')}}">
+                    <span class="icon">
+                        <i class="fa fa-fw fa-pencil m-r-5"></i>
+                    </span>Post
                     </a>
                 </li>
                 <li class="seperator"></li>
