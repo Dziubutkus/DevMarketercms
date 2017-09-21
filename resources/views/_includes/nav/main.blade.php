@@ -4,9 +4,10 @@
         <a class="nav-item is-paddingless" href="{{url('/')}}">
             <img src="{{asset('images/WYD.png')}}" alt="What Today? logo">
         </a>
-        <a class="nav-item is-tab is-hidden-mobile m-l-10">Learn</a>
-        <a class="nav-item is-tab is-hidden-mobile">Discuss</a>
-        <a class="nav-item is-tab is-hidden-mobile">Share</a>
+        <a class="nav-item is-tab is-hidden-mobile m-l-10">Food</a>
+        <a class="nav-item is-tab is-hidden-mobile">Activities</a>
+        <a class="nav-item is-tab is-hidden-mobile">Events</a>
+        <a class="nav-item is-tab is-hidden-mobile">Blog</a>
         </div>
         <span class="nav-toggle">
         <span></span>
@@ -14,9 +15,10 @@
         <span></span>
         </span>
         <div class="nav-right nav-menu" style="overflow: visible">
-        <a class="nav-item is-tab is-hidden-tablet is-active">Learn</a>
-        <a class="nav-item is-tab is-hidden-tablet">Discuss</a>
-        <a class="nav-item is-tab is-hidden-tablet">Share</a>
+        <a class="nav-item is-tab is-hidden-tablet is-active">Food</a>
+        <a class="nav-item is-tab is-hidden-tablet">Activities</a>
+        <a class="nav-item is-tab is-hidden-tablet">Events</a>
+        <a class="nav-item is-tab is-hidden-tablet">Blog</a>
         @if (Auth::guest())
             <a href="{{route('login')}}" class="nav-item is-tab">Login</a>
             <a href="{{route('register')}}" class="nav-item is-tab">Join the Community</a>

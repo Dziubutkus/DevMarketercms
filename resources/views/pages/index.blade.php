@@ -14,7 +14,7 @@
     </div>
   </div>
 </section>
-
+<!--
 <div class="container m-t-30">
   <div class="columns">
   @if(count($posts) > 0)
@@ -55,5 +55,5 @@
   @endif
   </div>
 </div>
-
+-->
 @endsection

@@ -17,10 +17,11 @@
 </head>
 <body>
     @include('_includes.nav.main')
+    <div id="app">
+    <div class="columns">
+    @include('_includes.nav.manage') 
         
-    @include('_includes.nav.manage')
-        
-    <div class="management-area" id="app">
+    
         @yield('content')
     </div>
 

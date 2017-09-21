@@ -13,19 +13,6 @@
     <div class="columns">
       <div class="column">
 
-        <div class="field">
-          <div class="control">
-            <label class="radio">
-              <input type="radio" name="answer">
-              Yes
-            </label>
-            <label class="radio">
-              <input type="radio" name="answer">
-              No
-            </label>
-          </div>
-        </div>
-
         {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
 
           <div class="field">
@@ -48,6 +35,29 @@
       </div>
     </div>
 
+    <div class="block">
+            <b-radio v-model="radio"
+                native-value="Flint">
+                Flint
+            </b-radio>
+            <b-radio v-model="radio"
+                native-value="Silver">
+                Silver
+            </b-radio>
+            </div>
+
+
   </div> <!-- end of .container -->
 
+@endsection
+
+@section('scripts')
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        
+      }
+    });
+  </script>
 @endsection

@@ -1,18 +1,21 @@
 @extends('layouts.manage')
 
 @section('content')
-  <div class="flex-container">
-    <div class="columns m-t-10">
-      <div class="column">
-        <h1 class="title">Edit User</h1>
-      </div>
-    </div>
+<div class="column is-10">
+    <section class="section p-t-20 p-b-20">
+        <div class="level">
+          <div class="level-left">
+            <h1 class="title">Edit User</h1>
+          </div>
+        </div>
+    </section>
+
     <hr class="m-t-0">
 
     <form action="{{route('users.update', $user->id)}}" method="POST">
       {{method_field('PUT')}}
       {{csrf_field()}}
-      <div class="columns">
+      <div class="columns m-l-10 m-r-10">
         <div class="column">
           <div class="field">
             <label for="name" class="label">Name:</label>
@@ -60,9 +63,9 @@
           </b-checkbox-group>
         </div>
       </div>
-      <div class="columns">
+      <div class="columns m-r-10 m-l-10">
         <div class="column">
-          <hr />
+          <hr>
           <button class="button is-primary is-pulled-right" style="width: 250px;">Edit User</button>
         </div>
       </div>
