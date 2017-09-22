@@ -44,7 +44,43 @@
         </div>
         </div>
 
-    </div>
-</div>
+    <section class="section">
+
+        @if(count($posts) > 0)
+        <table class="table is-fullwidth">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Body</th>
+                    <th>Posted on</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($posts as $post)
+                    <tr>
+                        <td>{{ $post->title }}</td>
+                        <td>{{ substr(strip_tags($post->body), 0, 20)}}{{ strlen(strip_tags($post->body)) > 20 ? "..." : "" }}</td>
+                        <td>{{ date('j M, Y', strtotime($post->created_at)) }}</td>
+                        <th><a href="/devmarketercms/public/posts/{{$post->id}}" class="button">View</a></th>
+                        <th><a href="/devmarketercms/public/posts/{{$post->id}}/edit" class="button is-light">Edit</a></th>
+                        <th>
+                            {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST'])!!}
+                                {{Form::hidden('_method', 'DELETE')}}
+                                {{Form::submit('Delete', ['class' => 'button is-dark'])}}
+                            {!!Form::close()!!}
+                        </th>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+        @else
+            <p>You don't have any posts.</p>
+        @endif
+        </section>
+        </div>
+  </div>
 
 @endsection
